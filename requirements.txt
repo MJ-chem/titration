@@ -1,1 +1,1 @@
-streamlitpandasimport plotlib.pyplotmatplotlibosImagefont-ttf-nanum
+streamlitpandasmatplotlibPillowfont-ttf-nanum
