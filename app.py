@@ -52,7 +52,7 @@ elif selected_page == "📘 개념 이해":
     st.divider()
 
     # 한글 폰트 설정 (한글 깨짐 방지)
-    matplotlib.rc("font", family="Malgun Gothic")  # Windows에서 사용할 경우
+    matplotlib.rc("font", family="NanumGothic")
     plt.rcParams["axes.unicode_minus"] = False  # 마이너스 기호 깨짐 방지
 
     # 앱 시작
