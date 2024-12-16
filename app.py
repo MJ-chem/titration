@@ -156,15 +156,21 @@ elif selected_page == "📘 개념 이해":
 
         elif graph_type == "원 그래프":
             with st.container():
-                row_index = st.slider("원 그래프로 볼 행 선택 (0부터 시작)", min_value=0, max_value=num_rows - 1, value=0)
+                # 행 선택 슬라이더
+                row_index = st.slider("원 그래프로 볼 행 선택 (0부터 시작)", 
+                                      min_value=0, max_value=num_rows - 1, value=0)
                 row_data = df.iloc[row_index, 1:].fillna(0)
-
-                if row_data.sum() == 0:
+        
+                # 비율이 0인 데이터 제외
+                filtered_data = row_data[row_data > 0]  # 0보다 큰 값만 필터링
+                labels = [label.replace("⁺", "$^{+}$").replace("⁻", "$^{-}$") for label in filtered_data.index]
+                
+                if filtered_data.sum() == 0:  # 데이터 합이 0이면 오류 메시지 출력
                     st.error("선택된 행의 데이터 합이 0이므로 원 그래프를 표시할 수 없습니다.")
                 else:
+                    # 원 그래프 그리기
                     plt.figure(figsize=(6, 6))
-                    labels = [label.replace("⁺", "$^{+}$").replace("⁻", "$^{-}$") for label in row_data.index]
-                    plt.pie(row_data, labels=labels, autopct="%.1f%%", startangle=140)
+                    plt.pie(filtered_data, labels=labels, autopct="%.1f%%", startangle=140)
                     plt.title(f"NaOH(aq) 부피 {df.iloc[row_index, 0]} mL에서의 이온 비율")
                     st.pyplot(plt)
 
