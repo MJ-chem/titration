@@ -133,7 +133,7 @@ elif selected_page == "📘 개념 이해":
         
                 # x축 기준값 (NaOH 부피)
                 x = df["NaOH(aq) 부피 (mL)"]
-                bar_width = 0.2  # 막대 너비
+                bar_width = 0.5  # 막대 너비
                 offsets = range(len(df.columns[1:]))  # 이온 개수만큼 간격
                 
                 # 막대 그래프 생성
