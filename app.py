@@ -473,7 +473,7 @@ elif selected_page == "🌍 실생활 적용":
         st.divider()
 
         st.subheader("🔍 자료2. IPCC 4차 보고서에 제시된 이산화탄소 방출 4가지 시나리오에 따른 산성도(pH) 감소 예측치")
-        st.image("10.jpg", width=1400)
+        st.image("10.jpg", width=1200)
         st.write("출처: Modified from C. Turley et al.(2010)")
         st.divider()
 
