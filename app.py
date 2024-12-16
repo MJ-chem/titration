@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib as mpl
+import matplotlib
 import os
 from PIL import Image
+from matplotlib import font_manager, rc
 
 # 페이지 설정
 st.set_page_config(
@@ -52,7 +53,10 @@ elif selected_page == "📘 개념 이해":
     st.divider()
 
     # 한글 폰트 설정
-    mpl.rcParams['font.family'] = ['Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', 'sans-serif']
+    # 폰트 설정
+    font_path = "NanumGothic.ttf"  # Windows의 일반적인 경로
+    font_manager.fontManager.addfont(font_path)
+    rc('font', family='NanumGothic')
     plt.rcParams["axes.unicode_minus"] = False  # 마이너스 기호 깨짐 방지
 
     # 앱 시작
