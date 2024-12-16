@@ -64,7 +64,8 @@ elif selected_page == "📘 개념 이해":
         st.header("✔️ 중화 반응을 모형으로 설명하기")
         st.markdown("""
         <div style='background-color: #eae2fc; padding: 20px; border-radius: 10px; font-size: 25px;'>
-            그림은 0.1M HCl(aq) 200mL가 0.2M NaOH(aq) 100mL와 반응할 때, 각 용액 속에 존재하는 이온들을 입자 모형으로 나타낸 것이다.<br>
+            그림은 0.1M HCl(aq) 200mL가 0.2M NaOH(aq) 100mL와 반응할 때, <br>
+            각 용액 속에 존재하는 이온들을 입자 모형으로 나타낸 것이다. <br>
             각 용액에 존재하는 이온들의 입자 모형을 참고하여 0.1M HCl(aq) 200mL가 들어 있는 비커에 <br> 
             0.2M NaOH(aq)을 50mL씩 첨가할 때, 혼합 용액 속에 존재하는 각 이온의 수를 아래(⬇️) 표에 입력하세요~! <br>
             (단, 용액 속에 존재하는 각 이온의 수는 입자 모형의 수와 같다.)
@@ -91,8 +92,8 @@ elif selected_page == "📘 개념 이해":
             cols = st.columns(5)
 
             vol = cols[0].number_input(f"0.2M NaOH(aq) 부피 (mL)", min_value=0, value=0, step=10, key=f"vol_{i}")
-            h_ion = cols[1].number_input(f"H⁺", min_value=0, value=0, key=f"h_ion_{i}")
-            cl_ion = cols[2].number_input(f"Cl⁻", min_value=0, value=0, key=f"cl_ion_{i}")
+            h_ion = cols[1].number_input(f"H⁺", min_value=0, value=2, key=f"h_ion_{i}")
+            cl_ion = cols[2].number_input(f"Cl⁻", min_value=0, value=2, key=f"cl_ion_{i}")
             na_ion = cols[3].number_input(f"Na⁺", min_value=0, value=0, key=f"na_ion_{i}")
             oh_ion = cols[4].number_input(f"OH⁻", min_value=0, value=0, key=f"oh_ion_{i}")
 
@@ -119,22 +120,38 @@ elif selected_page == "📘 개념 이해":
             with st.container():
                 plt.figure(figsize=(5, 3))
                 for column in df.columns[1:]:
-                    plt.plot(df["NaOH 부피 (mL)"], df[column], marker="o", label=column.replace("⁺", "$^{+}$").replace("⁻", "$^{-}$"))
-                plt.xlabel("NaOH 부피 (mL)")
+                    plt.plot(df["NaOH(aq) 부피 (mL)"], df[column], marker="o", label=column.replace("⁺", "$^{+}$").replace("⁻", "$^{-}$"))
+                plt.xlabel("NaOH(aq) 부피 (mL)")
                 plt.ylabel("이온 수")
-                plt.title("NaOH 부피에 따른 이온 수 변화")
+                plt.title("NaOH(aq) 부피에 따른 이온 수 변화")
                 plt.legend()
                 st.pyplot(plt)
 
         elif graph_type == "막대 그래프":
             with st.container():
-                plt.figure(figsize=(5, 3))
-                for column in df.columns[1:]:
-                    plt.bar(df["NaOH 부피 (mL)"], df[column], label=column.replace("⁺", "$^{+}$").replace("⁻", "$^{-}$"), alpha=0.7)
-                plt.xlabel("NaOH 부피 (mL)")
+                plt.figure(figsize=(8, 5))
+        
+                # x축 기준값 (NaOH 부피)
+                x = df["NaOH(aq) 부피 (mL)"]
+                bar_width = 0.2  # 막대 너비
+                offsets = range(len(df.columns[1:]))  # 이온 개수만큼 간격
+                
+                # 막대 그래프 생성
+                for i, column in enumerate(df.columns[1:]):  # 첫 번째 컬럼 제외
+                    plt.bar(x + bar_width * i, 
+                            df[column], 
+                            width=bar_width, 
+                            label=column.replace("⁺", "$^{+}$").replace("⁻", "$^{-}$"), 
+                            alpha=0.7)
+                
+                # 그래프 설정
+                plt.xlabel("NaOH(aq) 부피 (mL)")
                 plt.ylabel("이온 수")
-                plt.title("NaOH 부피에 따른 이온 수 변화")
+                plt.title("NaOH(aq) 부피에 따른 이온 수 변화")
+                plt.xticks(x + bar_width * (len(df.columns[1:]) - 1) / 2, x)  # x축 중심 조정
                 plt.legend()
+                
+                # 스트림릿에 그래프 출력
                 st.pyplot(plt)
 
         elif graph_type == "원 그래프":
