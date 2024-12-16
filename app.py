@@ -80,7 +80,7 @@ elif selected_page == "📘 개념 이해":
         num_rows = st.number_input("입력할 데이터 행의 개수", min_value=1, max_value=10, value=5)
 
         data = {
-            "NaOH 부피 (mL)": [],
+            "NaOH(aq) 부피 (mL)": [],
             "H⁺": [],
             "Cl⁻": [],
             "Na⁺": [],
@@ -97,7 +97,7 @@ elif selected_page == "📘 개념 이해":
             na_ion = cols[3].number_input(f"Na⁺", min_value=0, value=0, key=f"na_ion_{i}")
             oh_ion = cols[4].number_input(f"OH⁻", min_value=0, value=0, key=f"oh_ion_{i}")
 
-            data["NaOH 부피 (mL)"].append(vol)
+            data["NaOH(aq) 부피 (mL)"].append(vol)
             data["H⁺"].append(h_ion)
             data["Cl⁻"].append(cl_ion)
             data["Na⁺"].append(na_ion)
@@ -165,7 +165,7 @@ elif selected_page == "📘 개념 이해":
                     plt.figure(figsize=(6, 6))
                     labels = [label.replace("⁺", "$^{+}$").replace("⁻", "$^{-}$") for label in row_data.index]
                     plt.pie(row_data, labels=labels, autopct="%.1f%%", startangle=140)
-                    plt.title(f"NaOH 부피 {df.iloc[row_index, 0]} mL에서의 이온 비율")
+                    plt.title(f"NaOH(aq) 부피 {df.iloc[row_index, 0]} mL에서의 이온 비율")
                     st.pyplot(plt)
 
 if "submitted" not in st.session_state:
