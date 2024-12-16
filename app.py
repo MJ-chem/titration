@@ -192,7 +192,7 @@ elif selected_page == "🔬 실험 수행":
     with st.expander("", expanded=True):
         st.markdown("""
         <div style='background-color: #e2f4fc; padding: 20px; border-radius: 10px; font-size: 25px; color: navy;'>
-            <b>Q. 어느날 실험실에서 농도가 표시되지 않은 염산병을 발견했어. 이 염산의 농도를 알아내려면 어떻게 해야 할까?</b><br>
+            <b>Q. 어느날 실험실에서 농도가 표시되지 않은 염산병을 발견했습니다~! 이 염산의 농도를 알아내려면 어떻게 해야 할까요?</b><br>
         </div><br><br>
         """, unsafe_allow_html=True)
         st.subheader("➡️ 위 질문에 대한 답변을 작성해 보세요:")
@@ -271,21 +271,21 @@ elif selected_page == "🔬 실험 수행":
         with st.expander("", expanded=True):
             st.title("🟢 중화 적정 실험 과정")
             # 다단 레이아웃 생성 (2단)
-            col1, col2 = st.columns([1, 4])  # 왼쪽과 오른쪽의 비율 설정 (1:1 비율)
+            col1, col2 = st.columns([2, 3])  # 왼쪽과 오른쪽의 비율 설정 (2:3 비율)
 
             # 왼쪽: 실험 장치 사진
             with col1:
-                st.header("🧪 그림 1. 실험 장치")
+                st.subheader("🧪 그림 1. 실험 장치")
                 # 실험 장치 사진 추가
                 image = Image.open("11.jpg")
                 st.image(image, use_container_width=True)  # 이미지와 캡션
 
             # 오른쪽: 실험 과정 설명
             with col2:
-                st.header("📄 실험 과정")
+                st.subheader("📄 실험 과정")
                 # 실험 과정 작성
                 st.markdown("""
-                <div style="font-size: 30px; font-weight: bold; line-height: 2.0; margin-left: 30px;">
+                <div style="font-size: 25px; font-weight: bold; line-height: 2.0; margin-left: 30px;">
                     1. 그림 1과 같이 실험 장치를 준비한다.<br>
                     2. 삼각 플라스크에 교반 자석을 넣고, 피펫으로 미지 농도의 HCl(aq) 20mL를 넣는다.<br>
                     3. 과정 2의 삼각 플라스크에 페놀프탈레인 용액을 2~3방울 떨어뜨린다.<br>
