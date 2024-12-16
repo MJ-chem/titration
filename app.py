@@ -322,7 +322,7 @@ elif selected_page == "🔬 실험 수행":
             # 계산
             if final <= initial:
                 volume = initial - final
-                st.markdown(f"<div style='font-size: 20px; color: red;'>▶ 소모된 0.1 M NaOH의 부피 = {volume:.2f} mL</div>", unsafe_allow_html=True)
+                st.markdown(f"<div style='font-size: 20px; color: red;'>▶ 소모된 0.1 M NaOH(aq)의 부피 = {volume:.2f} mL</div>", unsafe_allow_html=True)
             else:
                 st.error("뷰렛의 처음 눈금은 나중 눈금보다 커야 합니다!")
 
