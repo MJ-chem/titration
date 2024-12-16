@@ -92,8 +92,8 @@ elif selected_page == "📘 개념 이해":
             cols = st.columns(5)
 
             vol = cols[0].number_input(f"0.2M NaOH(aq) 부피 (mL)", min_value=0, value=0, step=10, key=f"vol_{i}")
-            h_ion = cols[1].number_input(f"H⁺", min_value=0, value=2, key=f"h_ion_{i}")
-            cl_ion = cols[2].number_input(f"Cl⁻", min_value=0, value=2, key=f"cl_ion_{i}")
+            h_ion = cols[1].number_input(f"H⁺", min_value=0, value=0, key=f"h_ion_{i}")
+            cl_ion = cols[2].number_input(f"Cl⁻", min_value=0, value=0, key=f"cl_ion_{i}")
             na_ion = cols[3].number_input(f"Na⁺", min_value=0, value=0, key=f"na_ion_{i}")
             oh_ion = cols[4].number_input(f"OH⁻", min_value=0, value=0, key=f"oh_ion_{i}")
 
