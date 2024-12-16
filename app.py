@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib
+import matplotlib as mpl
 import os
 from PIL import Image
 
@@ -52,7 +52,7 @@ elif selected_page == "📘 개념 이해":
     st.divider()
 
     # 한글 폰트 설정
-    plt.rcParams['font.family'] = 'Noto Sans KR'
+    mpl.rcParams['font.family'] = ['Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', 'sans-serif']
     plt.rcParams["axes.unicode_minus"] = False  # 마이너스 기호 깨짐 방지
 
     # 앱 시작
