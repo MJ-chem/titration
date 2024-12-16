@@ -377,10 +377,9 @@ elif selected_page == "🌍 실생활 적용":
     st.divider()
 
     with st.expander("", expanded=True):
-        st.header("📈🔍 북태평양 하와이 마우나로아산과 하와이 근해 알로하 측정소에서 측정한 대기의")
-        st.header("CO\u2082 농도와 해수의 pH")
-        st.markdown("<h1 style='text-indent: 30px;'>📈🔍 북태평양 하와이 마우나로아산과 하와이 근해 알로하 측정소에서 측정한 대기의 <br> CO₂ 농도와 해수의 pH </h1>", 
-            unsafe_allow_html=True)
+        st.markdown("""<h2>📈🔍 북태평양 하와이 마우나로아산과 하와이 근해 알로하 측정소에서 측정한 대기의<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;CO₂ 농도와 해수의 pH</h2>
+        """, unsafe_allow_html=True)
         
         # 데이터 로드
         file_path = 'data.csv'
