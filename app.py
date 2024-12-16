@@ -313,7 +313,7 @@ elif selected_page == "🔬 실험 수행":
 
             # 제목
             st.subheader("📊 측정한 데이터 입력")
-            st.markdown("➡️ 아래 제시된 표에 실험 과정 6과 10에서 측정한 NaOH(aq)의 부피를 입력하세요. 뷰렛의 처음 눈금과 나중 눈금을 입력하면, 소모된 NaOH(aq)의 부피가 자동으로 계산됩니다.")
+            st.markdown("➡️ 실험 과정 6(뷰렛의 처음 눈금)과 10(뷰렛의 나중 눈금)에서 측정한 NaOH(aq)의 부피를 입력하세요. 소모된 NaOH(aq)의 부피는 자동으로 계산됩니다.")
 
             # 입력 필드 생성
             initial = st.number_input("뷰렛의 처음 눈금 (mL)", min_value=0.0, step=0.1, value=0.0)
