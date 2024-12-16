@@ -292,7 +292,7 @@ elif selected_page == "🔬 실험 수행":
                     4. 깔때기를 이용하여 0.1M NaOH(aq)을 뷰렛에 넣는다.<br>
                     5. 뷰렛 아래에 빈 용기를 댄 다음 뷰렛의 꼭지를 열어 꼭지 아래에도 NaOH(aq)을 채운 후 꼭지를 잠근다.<br>
                     6. 뷰렛의 눈금을 읽어 NaOH(aq)의 처음 부피를 기록한다.<br>
-                    7. HCl(aq)이 들어 있는 삼각 플라스크를 교반기 위에 올려놓고 교반기를 작동한 후, <span style="text-indent: 30px; display: inline-block;">NaOH(aq)을 천천히 떨어뜨린다.<br>
+                    7. HCl(aq)이 들어 있는 삼각 플라스크를 교반기 위에 올려놓고 교반기를 작동한 후, <span style="text-indent: 20px; display: inline-block;">NaOH(aq)을 천천히 떨어뜨린다.<br>
                     8. 수용액이 붉은색으로 변하기 시작하면, 꼭지를 조절하여 소량씩 떨어뜨린다.<br>
                     9. 삼각 플라스크에 들어 있는 용액 전체가 붉은색으로 변하는 순간 꼭지를 잠근다.<br>
                     10. NaOH(aq)의 나중 부피를 측정하여 기록한다.
