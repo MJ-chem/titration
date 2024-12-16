@@ -129,11 +129,11 @@ elif selected_page == "📘 개념 이해":
 
         elif graph_type == "막대 그래프":
             with st.container():
-                plt.figure(figsize=(8, 5))
+                plt.figure(figsize=(5, 3))
         
                 # x축 기준값 (NaOH 부피)
                 x = df["NaOH(aq) 부피 (mL)"]
-                bar_width = 1.5  # 막대 너비
+                bar_width = 2.0  # 막대 너비
                 offsets = range(len(df.columns[1:]))  # 이온 개수만큼 간격
                 
                 # 막대 그래프 생성
