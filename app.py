@@ -479,8 +479,8 @@ elif selected_page == "🌍 실생활 적용":
 
         st.markdown("""
         <div style='background-color: #e2f4fc; padding: 20px; border-radius: 10px; font-size: 25px; color: navy;'>
-            <b>Q. 위에 제시된 자료 1과 자료 2를 토대로 해양 산성화가<br> 
-            <span style="text-indent: 30px; display: inline-block;">탄산 칼슘(CaCO\u2083)을 이용해 골격을 형성하는 해양생물에 미치는 영향을 작성해보자~!</b>
+            <b>Q. 위에 제시된 자료 1과 자료 2를 살펴본 후 해양 산성화가<br> 
+            <span style="text-indent: 30px; display: inline-block;">탄산 칼슘(CaCO\u2083)을 이용해 골격을 형성하는 해양생물에 어떤 영향을 미치는지 작성해보자~!</b>
         </div><br><br>
         """, unsafe_allow_html=True)
         st.subheader("➡️ 위 질문에 대한 답변을 작성해 보세요:")
