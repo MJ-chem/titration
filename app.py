@@ -54,7 +54,7 @@ elif selected_page == "📘 개념 이해":
 
     # 한글 폰트 설정
     # 폰트 경로 지정
-    font_path = "NanumGothic.ttf"
+    font_path = "./NanumGothic.ttf"
     font_prop = fm.FontProperties(fname=font_path)
     
     # Matplotlib에 폰트 적용
