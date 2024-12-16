@@ -6,6 +6,13 @@ import os
 from PIL import Image
 from matplotlib import font_manager, rc
 
+# 한글 폰트 설정
+# 폰트 설정
+font_path = "NanumGothic.ttf"  # Windows의 일반적인 경로
+font_manager.fontManager.addfont(font_path)
+rc('font', family='NanumGothic')
+plt.rcParams["axes.unicode_minus"] = False  # 마이너스 기호 깨짐 방지
+
 # 페이지 설정
 st.set_page_config(
     page_title="중화 반응 앱",
@@ -51,13 +58,6 @@ if selected_page == "🏠 Home":
 elif selected_page == "📘 개념 이해":
     st.title("📘 중화 반응 개념 복습하기")
     st.divider()
-
-    # 한글 폰트 설정
-    # 폰트 설정
-    font_path = "NanumGothic.ttf"  # Windows의 일반적인 경로
-    font_manager.fontManager.addfont(font_path)
-    rc('font', family='NanumGothic')
-    plt.rcParams["axes.unicode_minus"] = False  # 마이너스 기호 깨짐 방지
 
     # 앱 시작
     with st.expander("", expanded=True):
