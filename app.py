@@ -398,7 +398,7 @@ elif selected_page == "🌍 실생활 적용":
             st.subheader("연도별 대기 중 CO\u2082 농도 변화")
             fig, ax1 = plt.subplots(figsize=(10, 5))
             
-            ax1.plot(data['year'], data['마우나로아산 대기 중 CO2 농도(ppm)'], 'r-', label='CO\u2082 농도')
+            ax1.plot(data['year'], data['마우나로아산 대기 중 CO2 농도(ppm)'], 'r-', label='마우나로아산 대기 중 CO\u2082 농도(ppm)')
             ax1.set_xlabel('연도')
             ax1.set_ylabel('CO\u2082 농도 (ppm)', color='red')
             ax1.tick_params(axis='y', labelcolor='red')
@@ -410,7 +410,7 @@ elif selected_page == "🌍 실생활 적용":
             st.subheader("연도별 해수의 pH 변화")
             fig, ax2 = plt.subplots(figsize=(10, 5))
             
-            ax2.plot(data['year'], data['알로하 해수의 pH'], 'b-', label='pH 값')
+            ax2.plot(data['year'], data['알로하 해수의 pH'], 'b-', label='알로하 해수의 pH')
             ax2.set_xlabel('연도')
             ax2.set_ylabel('pH', color='blue')
             ax2.tick_params(axis='y', labelcolor='blue')
@@ -424,13 +424,13 @@ elif selected_page == "🌍 실생활 적용":
             # CO2 농도와 pH 변화 그래프를 하나의 그래프에 표시
             fig, ax1 = plt.subplots(figsize=(10, 5))
 
-            ax1.plot(data['year'], data['마우나로아산 대기 중 CO2 농도(ppm)'], 'r-', label='CO\u2082 농도')
+            ax1.plot(data['year'], data['마우나로아산 대기 중 CO2 농도(ppm)'], 'r-', label='마우나로아산 대기 중 CO\u2082 농도(ppm)')
             ax1.set_xlabel('연도')
             ax1.set_ylabel('CO\u2082 농도 (ppm)', color='red')
             ax1.tick_params(axis='y', labelcolor='red')
 
             ax2 = ax1.twinx()  # 동일한 x축을 사용하는 두 번째 y축
-            ax2.plot(data['year'], data['알로하 해수의 pH'], 'b-', label='pH 값')
+            ax2.plot(data['year'], data['알로하 해수의 pH'], 'b-', label='알로하 해수의 pH')
             ax2.set_ylabel('pH', color='blue')
             ax2.tick_params(axis='y', labelcolor='blue')
 
