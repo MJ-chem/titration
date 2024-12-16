@@ -169,7 +169,7 @@ elif selected_page == "📘 개념 이해":
                     st.error("선택된 행의 데이터 합이 0이므로 원 그래프를 표시할 수 없습니다.")
                 else:
                     # 원 그래프 그리기
-                    plt.figure(figsize=(4, 4))
+                    plt.figure(figsize=(6, 6))
                     plt.pie(filtered_data, labels=labels, autopct="%.1f%%", startangle=140)
                     plt.title(f"NaOH(aq) 부피 {df.iloc[row_index, 0]} mL에서의 이온 비율")
                     st.pyplot(plt)
