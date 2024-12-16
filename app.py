@@ -77,7 +77,7 @@ elif selected_page == "📘 개념 이해":
     
         # 데이터 입력 창을 틀 안에 배치    
         st.subheader("⚫ 데이터 입력")
-        num_rows = st.number_input("입력할 데이터 행의 개수", min_value=1, max_value=10, value=5)
+        num_rows = st.number_input("입력할 데이터 행의 개수를 설정하세요~!", min_value=1, max_value=10, value=5)
 
         data = {
             "NaOH(aq) 부피 (mL)": [],
