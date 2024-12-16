@@ -275,7 +275,7 @@ elif selected_page == "🔬 실험 수행":
 
             # 왼쪽: 실험 장치 사진
             with col1:
-                st.subheader("🧪 그림 1. 실험 장치")
+                st.subheader("🧪 실험 장치")
                 # 실험 장치 사진 추가
                 image = Image.open("11.jpg")
                 st.image(image, use_container_width=True)  # 이미지와 캡션
@@ -285,8 +285,8 @@ elif selected_page == "🔬 실험 수행":
                 st.subheader("📄 실험 과정")
                 # 실험 과정 작성
                 st.markdown("""
-                <div style="font-size: 25px; font-weight: bold; line-height: 2.0; margin-left: 30px;">
-                    1. 그림 1과 같이 실험 장치를 준비한다.<br>
+                <div style="font-size: 20px; font-weight: bold; line-height: 2.0; margin-left: 30px;">
+                    1. 왼쪽 사진과 같이 실험 장치를 준비한다.<br>
                     2. 삼각 플라스크에 교반 자석을 넣고, 피펫으로 미지 농도의 HCl(aq) 20mL를 넣는다.<br>
                     3. 과정 2의 삼각 플라스크에 페놀프탈레인 용액을 2~3방울 떨어뜨린다.<br>
                     4. 깔때기를 이용하여 0.1M NaOH(aq)을 뷰렛에 넣는다.<br>
