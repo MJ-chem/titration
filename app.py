@@ -363,7 +363,7 @@ elif selected_page == "🔬 실험 수행":
             st.subheader("📊 계산 결과")
             if M_prime is not None:
                 st.markdown(
-                    f"<div style='font-size: 24px; color: red; font-weight: bold;'>M' = {M_prime:.2f} M</div>",
+                    f"<div style='font-size: 24px; color: red; font-weight: bold;'>M' (HCl(aq)의 몰농도) = {M_prime:.2f} M</div>",
                     unsafe_allow_html=True,
                 )
             else:
