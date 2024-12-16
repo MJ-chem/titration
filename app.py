@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
 import matplotlib
 import os
 from PIL import Image
@@ -51,8 +52,13 @@ elif selected_page == "📘 개념 이해":
     st.title("📘 중화 반응 개념 복습하기")
     st.divider()
 
-    # 한글 폰트 설정 (한글 깨짐 방지)
-    matplotlib.rc("font", family="NanumGothic")
+    # 한글 폰트 설정
+    # 폰트 경로 지정
+    font_path = "NanumGothic.ttf"
+    font_prop = fm.FontProperties(fname=font_path)
+    
+    # Matplotlib에 폰트 적용
+    plt.rc("font", family=font_prop.get_name())
     plt.rcParams["axes.unicode_minus"] = False  # 마이너스 기호 깨짐 방지
 
     # 앱 시작
